@@ -1,0 +1,482 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    margin:0;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+}
+
+.kopf {
+    font: 1.25rem/1.5 'Kenia', cursive;
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 2rem;
+    background: linear-gradient(90deg, hsl(45 100% 45%), hsl(45 100% 70%));
+    color: #000;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+}
+.kopf-text {
+    font-size: 2.5rem;
+    text-shadow: 0 0 0.25rem hsl(45 100% 35%)
+}
+
+
+.ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+.ul-over {
+    display: flex;
+    list-style: none;
+}
+.li-over {
+    color: black;
+    font-weight: 200;
+    padding: 1rem 1.5rem;
+    position: relative
+}
+.li-sub {
+    padding: 0.75rem 3rem;
+}
+.ul-sub {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 10rem;
+}
+.li-over:hover .li-sub,
+.li-over:focus .li-sub,
+.li-over:focus-within .li-sub {
+    background-color: #000;
+    text-align: left;
+    padding: 0.25rem 1rem;
+    color: white;
+}
+
+.li-over:hover .ul-sub { 
+        display: block;
+}
+
+.li-over:hover,
+.li-over:focus,
+.li-over:focus-within {
+    background-color: #333;
+    color: white;
+}
+
+.li-sub:hover,
+.li-sub:focus,{
+    background-color: hsl(45 100% 25%);
+}
+main {
+    display: block;
+    margin: 0;
+    padding: 2rem 0;
+    background-color: hsl(45 50% 85%);
+    font: 1.125rem/1.125 Helvetica;
+    background-image: url("../images/t.webp");
+    background-repeat: no-repeat;
+    background-color: gold;
+    background-size:cover;
+    background-position: 0rem 3rem;
+    background-attachment: fixed;
+}
+.korper-icon {
+    display: block;
+    width: 25%;
+    margin: 5rem auto;
+    margin-bottom:1rem;
+    border-radius: 50%;
+    border: 0.35rem solid darkgreen;
+    box-shadow: 0 0 2rem #000;
+}
+.content-unit{
+    max-width: 90%;
+    height: fit-content;
+    font-weight: 100;
+    margin: 0.45rem auto;
+    background-color: hsl(45 70% 85%);
+    border-bottom: 0.25rem solid hsl(45 100% 50%);
+    border-top-left-radius: 1rem;   
+    border-top-right-radius: 1rem;   
+    box-shadow: 0 0 2rem hsl(0 100 25);
+}
+.content-unit+.content-unit {
+
+    max-width: 90%;
+    height: fit-content;
+    font-weight: 300;
+    margin: 0.45rem auto;
+    background-color: hsl(45 70% 85%);
+    border-bottom: 0.25rem solid hsl(45 100% 50%);
+    border-top: 0.25rem solid hsl(45 100% 50%);
+    border-top-left-radius: 1rem;   
+    border-top-right-radius: 1rem;   
+    box-shadow: 0 0 2rem hsl(0 100 25);
+
+}
+
+.cut-line+.content-unit {
+    margin: 0.45rem auto;
+    margin-bottom: 1rem;
+    border-top: 0.25rem solid hsl(45 100% 50%);
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom: 0.25rem solid hsl(45 100% 50%);
+    border-bottom-left-radius: 1rem;   
+    border-bottom-right-radius: 1rem;   
+}
+
+.content-header {
+    text-align: center;
+    color: #000;
+    background-color: hsl(45 100% 50%);
+    padding: 0.8rem 0;
+    border-top: 0.25rem solid hsl(0 100% 25%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.content-header h1 {
+    font-family: 'Kenia';
+}
+
+.content-header-2 {
+    background-color: hsl(40 70% 89%);
+    text-align: center;
+    border-top: 0.25rem solid hsl(0 100% 25%);
+    padding: 0.25rem;
+    border-radius: 0.25rem ;
+}
+
+.content-main {
+    max-width: 80%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: hsl(45 80% 90%);
+    border: 0.25rem dashed hsl(45 80% 60%);
+    border-radius: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 3rem hsl(45 80% 80%);
+}
+
+.content-main ul {
+    list-style: disc;
+    max-width: 50ch;
+    margin: 0.5rem auto;
+    text-align: left;
+    width: 60%;
+    margin-bottom: 1.5rem;
+}
+figure {
+    display: block;
+    width: 25%;
+    float: right;
+    margin-left: 1rem;
+}
+.content-main ul li {
+    font-size: 1rem;
+}
+.content-text-child {
+    font: 1rem/1.5 Helvetica;
+    color:black;
+}
+.content-text-child h3 {
+    margin: 0 auto;
+    line-height: 0.5;
+    color: yellow;
+    text-transform: lowercase;
+}
+.content-text-child p {
+    line-height: 1.2;
+}
+.content-text-child h4 {
+    margin-bottom: -0.5rem;
+    text-align: left;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+.content-text-child-img {
+    width: 35%;
+    float: right;
+}
+
+.content-text-child-img .content-button {
+    text-decoration: none;
+}
+.fox {
+    width: 100%;
+}
+.cut-line {
+    margin: 0.45rem auto;
+    border-top: 0.15rem solid rgb(240, 240, 240);
+    border-bottom: 0.15rem solid rgb(255, 255, 255);
+    border-right: 0;
+    border-left: 0;
+    width: 70%;
+    height: 1rem;
+}
+
+
+.text-line {
+    width: 60%;
+    margin: 0 auto;
+    border-top: 0.5rem palevioletred double;
+}
+.content-fuss {
+    padding: 1rem 0;
+    background-color: gold;
+    box-shadow: 0px 0px 0.5rem hsl(40 50% 70%);
+    border-bottom: 0.25rem solid hsl(45 100% 50%);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    height: 5rem;
+    text-align: center;
+    font: 1rem 'Kenia';
+}
+
+
+.content-img {
+    background: url(../images/sky.jpg) no-repeat;
+    background-position: 0 ;
+    background-size: cover;
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border: solid 0.08rem hsl(0 100% 27%);
+    margin: 1rem auto;
+}
+table {
+    margin: 0 auto;
+    width: 90%;
+    font-family: sans-serif;
+    font-size: 80%;
+    border-collapse: collapse;
+    background-color: wheat;
+    border: 0.25rem solid hsl(0 100% 27%);
+    text-align: center;
+    vertical-align: middle;
+}
+thead th {
+    width: 20%;
+    background-color:  hsl(0 30% 50%);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+}
+caption {
+    font-size: 80%;
+    font-weight: bold;
+    text-align: left;
+    color: hsl(0 50% 25%);
+    margin: 0 auto 0.25rem;
+    text-align: center;
+}
+td, th {
+    padding: 1%;
+}
+.chosen {
+    background-color: green;
+    color: gold;
+}
+tbody th {
+    background-color: hsl(270 50% 30%);
+}
+tbody tr:nth-child(odd) {
+    background-color: hsl(40 30% 50%);
+ }
+tbody tr:nth-child(even) {
+    background-color: hsl(40 50% 60%);
+}
+tbody tr:nth-child(even) th {
+    background-color: hsl(270 50% 50%);
+}
+.cut-line-content-2 {
+    border-top: 0.2rem solid brown;
+    border-bottom: 0.2rem dotted brown;
+    margin: 2rem auto;
+    width: 70%
+}
+article h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.01rem;
+    text-align: center;
+    margin-bottom: 0.35rem;
+}
+article p {
+    font: 1.45rem/1.5 sans-serif;
+}
+
+article h4 {
+    text-decoration: red underline wavy;
+    text-transform: lowercase;
+    text-align: right;
+}
+.link {
+    background-color: brown;
+    font-family: 'Kenia';
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1rem;
+    border: 0.05rem solid gold;
+    border-radius: 15%;
+    color: hsl(45 50% 70%);
+    text-decoration: none;
+    box-shadow: -0.1rem 0.1rem 0rem yellow inset, -0.1rem 0.1rem 0rem blue, 0 0 1rem black, 0 0 1.5rem blueviolet;
+}
+.parchment-conditions {
+    padding: 2.5rem;
+    font: 1rem/1.2 serif;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: whitesmoke;
+    border-left: solid 0.1rem black;
+    border-right: solid 0.1rem black;
+    border-top: solid 0.2rem black;
+    border-bottom: solid 0.1rem #333 ;
+    height: 35rem;
+    width: 80%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    box-shadow: 0 0 3rem inset #333, 0 0 3rem black;
+}
+.parchment-conditions:hover {
+    box-shadow: 0 0 3rem inset #333;
+}
+.parchment-text p {
+    font: 1rem/1.2 serif;
+    max-width: 45ch;
+    margin: 0 auto;
+    background-color:  hsl(40 10% 80%);
+
+}
+.parchment-header {
+    background-color: hsl(40 20% 80%);
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+.parchment-header h3{
+    letter-spacing: 3%;
+}
+.parchment-text p+h4 {
+    text-align: center;
+    margin: 0.5rem;
+    font-size: 0.4rem;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+}
+
+.parchment-text h5 {
+    color: orange;
+    margin-top: 2rem;
+    font-size: 2rem;
+}
+.article-title {
+    margin: 0.75rem auto;
+    font-family: 'Kenia';
+    color: tomato;
+    font-size: 3rem;
+    outline: 1rem double black;
+    text-decoration: none;
+    text-align: center;
+}
+blockquote  {
+    text-align: center;
+    height: fit-content;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 1rem;
+    box-shadow: 0 0 3rem black;
+
+}
+blockquote  p {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+blockquote+hr {
+    margin: 1rem auto;
+    width: 20%;
+    background-color: transparent;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0.5rem solid red;
+    border-bottom:0.5rem solid red;
+
+}
+
+form {
+    margin:0;
+    max-width: 90%;
+    background-color: inherit;
+    text-align: center;
+}
+label {
+    font: 2rem 'Kenia';
+
+}
+
+input {
+    border: 0.1rem solid red;
+    background-color: #333;
+    margin: 1rem;
+    font: 1.5rem serif;
+}
+input:hover {
+    opacity: 50%;
+}
+
+.buttonA {
+    position: absolute;
+    right: 60%;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0 auto;
+    background-color: hsl(0 50% 50%);
+    border: 0.4rem white solid;
+    z-index: 0;
+}
+.buttonA:hover {
+    opacity: 50%;
+    box-shadow: 0 0 3rem #333 inset;
+}
+
+
+ .fuss {
+    height: 7rem;
+    background-color: hsl(0 100% 27%);
+    padding: 1rem;
+}
+
+
+.fuss h5 {
+    color: white;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fuss-leaf {
+    width: 3rem;
+}
+.fuss-logo {
+    width: 3rem;
+}
