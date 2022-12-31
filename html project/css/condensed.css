@@ -155,8 +155,18 @@ main {
     border-top: 0.25rem solid hsl(0 100% 25%);
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
+    margin-bottom: 2rem;
 }
 
+hr+.content-unit .content-header {
+    text-align: center;
+    color: #000;
+    background-color: hsl(45 100% 50%);
+    padding: 0.8rem 0;
+    border-top: 0.25rem solid hsl(0 100% 25%);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 .content-header h1 {
     font-family: 'Kenia';
 }
@@ -472,50 +482,129 @@ blockquote  {
     border-radius: 0.5rem;
     box-shadow: 0 0 1rem black, 0.1rem 0.1rem inset white;
 }
-
+/* form section */
 form {
-    margin:0;
-    max-width: 90%;
-    text-align: left;
-    background-color: hsl(0, 70%, 25%);
-    border: 0.5rem double hsl(40 80% 55%);
-    color: white;
+    display: grid;
+    box-sizing: border-box;
+    background-color: hsl(40 80% 95%);
+    border-radius: 1rem;
+    border: 0.25rem double hsl(40 80% 70%);
+    padding: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
 }
-label {
-    font: 2rem 'Kenia';
-    text-shadow: 0.01rem 0.01rem black;
-    margin-left: 1rem;
-    margin-bottom: 0;
-}
-
-input {
-    display: inline;
-    border: 0.1rem solid red;
-    background-color: hsl(40 25% 4%);
-    margin: 1rem;
-    font: 1.5rem serif;
-    width: 70%;
-}
-input:hover {
-    opacity: 50%;
+.full-width{
+    grid-column: span 2;
 }
 
-.buttonA {
-    display: inline-block;
-    border-radius: 50%;
-    width: 2rem;
+input,
+textarea,
+select,
+fieldset,
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea {
+    background-color: hsla(0 35% 5%);
+    border: 0.15rem solid hsl(0 50% 50%);
+    border-radius: 0.25rem;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    display: block;
+    box-sizing: border-box;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    font: 1.25rem / 1.5 sans-serif;
+}
+textarea {
+    min-height: 10rem;
+}
+select {
+    color: #000;
+    font-weight: 700;
+    background: url(../images/monitor.png) hsl(0 0% 80%) no-repeat center right 0.075rem;
+    background-size: contain;
+}
+input[type="radio"] {
     height: 2rem;
-    margin: 0 auto;
-    background-color: hsl(0 50% 50%);
-    border: 0.4rem white solid;
-    z-index: 0;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: #000;
 }
-.buttonA:hover {
-    opacity: 50%;
-    box-shadow: 0 0 3rem #333 inset;
+input[type="radio"]:checked {
+    background: radial-gradient(
+        hsl(0 50% 60%) 40%,
+        transparent calc(40% + 1px)
+    );
 }
-
-
+input[type="checkbox"] {
+    background-color: white;
+    height: 2rem;
+    width: 2rem;
+    border: black 0.1rem solid;
+}
+input[type="checkbox"]:checked {
+    background:url(../images/check.png) no-repeat center / 75% auto;
+    box-shadow: 0 0 0.5rem orange;
+}
+.large-label {
+    display: block;
+    font: bold 1.25rem sans-serif;
+    margin-bottom: 1rem;
+}
+.small-label {
+    vertical-align: middle;
+    display: inline-block;
+    font: light 1rem sans-serif;
+    margin-left: 0.1rem;
+    margin-right:1.5rem;
+}
+input[type="text"],
+textarea {
+    opacity: 0.7;
+    font: 1rem serif;
+    color: hsl(0 5% 70%);
+}
+.but {
+    border: 0.2rem orange dotted;
+    font: bold 1.25rem serif;
+    padding: 0.35rem;
+    cursor:pointer;
+}
+.submit{
+    background-color: hsl(40 80% 50%);
+}
+.submit:hover{
+    box-shadow: 0 0 1rem hsl(50 50% 60%);
+}
+.reset {
+    margin-left: 2rem;
+    text-decoration: underline;
+}
+.reset:hover {
+    margin-left: 2rem;
+    text-decoration: none;
+}
+input:hover,
+textarea:hover,
+select:hover {
+    outline: none;
+    box-shadow:  0 0 1rem orange;
+}
+/* /////////////// */
  .fuss {
     height: fit-content;
     background-color: hsl(0 100% 27%);

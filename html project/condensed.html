@@ -15,8 +15,6 @@
     <body>
         <header class="kopf">
             <h1 id="Titulo"class="kopf-text">Kung Fu</h1>
-            <input type="text" id="testing" >
-            <button  type="button" id="myButton">send</button>
             <nav>
                 <ul class="ul ul-over">
                     <li class="li-over">
@@ -131,18 +129,6 @@
             </section>
             <hr class="cut-line">
             <section class="content-unit">
-                <article class="content-main">
-                    <form>
-                        <label class="form-title" for="warrior-name">
-                            <span  id="quiz">Enter your name</span>
-                            <input id="warrior-name" type="text">
-                        </label>
-                        <button class="buttonA"></button>
-                    </form>
-                </article>
-            </section>
-            <hr class="cut-line-2">
-            <section class="content-unit">
                 <div class="content-header">
                     <h1>With float</h1>
                 </div>
@@ -173,7 +159,58 @@
                         </div>
                     </article>
                 </article>
-                <hr class="cut-line-content-2">
+                <div class="content-fuss">
+                    <h1>This is my KUNG FU</h1>
+                    <h3>Panda Medley</h3>
+                </div>
+            </section>
+            <section class="content-unit">
+                <div class="content-header">
+                    <h1>FORMS!</h1>
+                </div>
+                <div class="content-main">
+                    <form>
+                        <div>
+                            <label for="name" class="large-label">Enter your name</label>
+                            <input id="name" type="text" placeholder="No nicknames accepted">
+                        </div>
+                        <div>
+                            <label for="email" class="large-label">Email address</label>
+                            <input id="email" type="text" placeholder="Insert your current email address">
+                        </div>
+                        <div>
+                            <label for="comp" class="large-label">What's your favorite CSS compiler?</label>
+                            <select id="comp">
+                                <option value="sass">Sass</option>
+                                <option value="less">Less</option>
+                                <option value="stylus">Stylus</option>
+                                <option value="postcss">PostCSS</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <fieldset>
+                                <legend class="large-label">Are you familiar with CSS grid?</legend>
+                                <input type="radio" id="yes" value="yes">
+                                <label for="yes" class="small-label">Yes</label>
+                                <input type="radio" id="no" value="no">
+                                <label for="no" class="small-label">No</label>
+                            </fieldset>
+                        </div>
+                        <div class="full-width">
+                            <label for="message" class="large-label">Message</label>
+                            <textarea id="message" placeholder="Type in a message for our developers"></textarea>
+                        </div>
+                        <div class="full-width">
+                            <input type="checkbox" id="newsletter">
+                            <label for="newsletter" class="small-label">Receive our newsletter?</label>
+                        </div>
+                        <div class="full-width">
+                            <button class="but submit">Send responses</button>
+                            <button class="but reset">Clear Form</button>
+                        </div>
+                    </form>
+                </div>
             </section>
         </main>
         <footer class="fuss">
